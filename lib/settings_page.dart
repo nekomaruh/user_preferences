@@ -23,6 +23,7 @@ class _SettingsPageState extends State<SettingsPage> {
     _sex = _prefs.sex;
     _secondaryColor = _prefs.secondaryColor;
     _name = _prefs.name;
+    _prefs.lastPage = SettingsPage.routeName;
     _textController = new TextEditingController(text: 'Name');
   }
 

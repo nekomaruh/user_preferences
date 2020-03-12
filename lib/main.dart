@@ -11,7 +11,7 @@ void main() async{
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  final prefs = new UserPreferences();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: HomePage.routeName,
+      initialRoute: prefs.lastPage,
       routes: {
         HomePage.routeName : (_) => HomePage(),
         SettingsPage.routeName : (_) => SettingsPage()

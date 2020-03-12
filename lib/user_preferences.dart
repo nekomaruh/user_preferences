@@ -16,14 +16,6 @@ class UserPreferences{
 
   }
 
-
-  /*
-  // None of this properties is used
-  bool _secondaryColor;
-  int _sex;
-  String _name;
-   */
-
   get sex{
     return _preferences.getInt('sex') ?? 1;
   }
@@ -55,7 +47,5 @@ class UserPreferences{
   set lastPage(String route){
     _preferences.setString('last_page', route);
   }
-
-
 
 }
