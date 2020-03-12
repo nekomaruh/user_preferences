@@ -47,6 +47,14 @@ class UserPreferences{
   set name(String name){
     _preferences.setString('name', name);
   }
+  
+  get lastPage{
+    return _preferences.getString('last_page' ?? 'home');
+  }
+
+  set lastPage(String route){
+    _preferences.setString('last_page', route);
+  }
 
 
 
