@@ -40,7 +40,13 @@ class UserPreferences{
     _preferences.setBool('secondary_color', value);
   }
 
+  get name{
+    return _preferences.getString('name') ?? "";
+  }
 
+  set name(String name){
+    _preferences.setString('name', name);
+  }
 
 
 

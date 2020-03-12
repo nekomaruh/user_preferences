@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
           Divider(),
           Text('Sex: ${prefs.sex}'),
           Divider(),
-          Text('User name')
+          Text('User name: ${prefs.name}')
         ],
       ),
     );

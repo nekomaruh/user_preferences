@@ -13,7 +13,7 @@ class SettingsPage extends StatefulWidget {
 class _SettingsPageState extends State<SettingsPage> {
   bool _secondaryColor;
   int _sex;
-  String _name = "Johan";
+  String _name;
   TextEditingController _textController;
   final _prefs = new UserPreferences();
 
@@ -22,6 +22,7 @@ class _SettingsPageState extends State<SettingsPage> {
     super.initState();
     _sex = _prefs.sex;
     _secondaryColor = _prefs.secondaryColor;
+    _name = _prefs.name;
     _textController = new TextEditingController(text: 'Name');
   }
 
@@ -62,7 +63,7 @@ class _SettingsPageState extends State<SettingsPage> {
                 helperText: 'Name of the person using the phone',
               ),
               onChanged: (text){ setState(() {
-                _name = text;
+                _prefs.name = text;
               });},
             ),
           )
